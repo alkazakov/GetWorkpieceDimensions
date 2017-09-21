@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>35a52a5e-9c0b-4ff7-a4b7-3b1db366e974</ProjectGuid>
+    <ProjectGuid>{35A52A5E-9C0B-4FF7-A4B7-3B1DB366E974}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>GetWorkpieceDimensions</RootNamespace>
@@ -30,24 +30,39 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="NXOpen">
+      <HintPath>..\..\..\..\..\..\..\PLM\NX11\NXBIN\managed\NXOpen.dll</HintPath>
+    </Reference>
+    <Reference Include="NXOpen.Guide">
+      <HintPath>..\..\..\..\..\..\..\PLM\NX11\NXBIN\managed\NXOpen.Guide.dll</HintPath>
+    </Reference>
+    <Reference Include="NXOpen.UF">
+      <HintPath>..\..\..\..\..\..\..\PLM\NX11\NXBIN\managed\NXOpen.UF.dll</HintPath>
+    </Reference>
+    <Reference Include="NXOpen.Utilities">
+      <HintPath>..\..\..\..\..\..\..\PLM\NX11\NXBIN\managed\NXOpen.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="NXOpenUI">
+      <HintPath>..\..\..\..\..\..\..\PLM\NX11\NXBIN\managed\NXOpenUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Snap">
+      <HintPath>..\..\..\..\..\..\..\PLM\NX11\NXBIN\managed\Snap.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="GetWorkpieceDimensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NXSigningResource.res" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
- </Project>
+</Project>
